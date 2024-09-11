@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "sample-ksp-component-builder"
 include(":app")
- 
+include(":core")
