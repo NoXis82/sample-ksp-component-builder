@@ -1,3 +1,4 @@
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -25,6 +26,16 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    sourceSets {
+        getByName("debug").java.srcDir("build/generated/ksp/debug/kotlin")
+        getByName("release").java.srcDir("build/generated/ksp/release/kotlin")
+    }
+}
+
+ksp {
+    arg("test_parameter_1", "false")
+    arg("test_parameter_2", "100")
 }
 
 dependencies {
@@ -39,6 +50,5 @@ dependencies {
 
     implementation(project(":core"))
     implementation(project(":network"))
-
-
+    implementation(project(":ksp-component-builder"))
 }

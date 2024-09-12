@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/contact" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/ksp-component-builder" />
             <option value="$PROJECT_DIR$/network" />
           </set>
         </option>
