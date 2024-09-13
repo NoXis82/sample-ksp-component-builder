@@ -3,6 +3,6 @@ package com.noxis.contact
 import dagger.Module
 
 @Module
-class RequiredParameterModule(
+internal class RequiredParameterModule(
     private val activity: ContactsActivity
 )

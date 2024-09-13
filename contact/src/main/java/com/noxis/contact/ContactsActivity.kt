@@ -21,18 +21,21 @@ class ContactsActivity : ComponentActivity() {
         DaggerContactsComponent.builder()
 //            .requiredParameterModule(RequiredParameterModule(this))
 //            .allDefaultParametersModule(AllDefaultParametersModule()) // we can omit it
-//            .unknownDependencies(object : UnknownDependencies {})
-//            .networkDependencies(DependenciesProvider.instance.provide()) // we can omit it
-//            .internalProvidableDependencies(DependenciesProvider.instance.provide()) // we can omit it
+            .unknownDependencies(object : UnknownDependencies {})
+            .networkDependencies(DependenciesProvider.instance.provide()) // we can omit it
+            .internalProvidableDependencies(DependenciesProvider.instance.provide()) // we can omit it
             .build()
             .inject(this)
 
         // VS
 
-//        ContactsComponentFactory.createComponent(
-    //        requiredParameterModule = RequiredParameterModule(this),
-    //        unknownDependencies = object : UnknownDependencies {},
-    //    ).inject(this)
+        ContactsComponentFactory.createComponent(
+            requiredParameterModule = RequiredParameterModule(this),
+            unknownDependencies = object : UnknownDependencies {},
+            allDefaultParametersModule = AllDefaultParametersModule(),
+            networkDependencies = DependenciesProvider.instance.provide(),
+            internalProvidableDependencies = DependenciesProvider.instance.provide()
+        ).inject(this)
 
     }
 }

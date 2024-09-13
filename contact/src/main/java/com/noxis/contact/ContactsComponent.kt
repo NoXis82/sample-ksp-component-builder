@@ -15,9 +15,9 @@ import dagger.Component
 @GenerateComponentFactory
 @Component(
     modules = [
-        InterfaceModule::class,
+        RequiredParameterModule::class,
         AllDefaultParametersModule::class,
-        RequiredParameterModule::class
+        InterfaceModule::class,
     ],
     dependencies = [
         NetworkDependencies::class,

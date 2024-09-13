@@ -11,7 +11,7 @@ java {
 }
 
 tasks.withType<KotlinCompile>().all {
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
 }
 //tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 //    kotlinOptions { jvmTarget = "11" }

@@ -38,8 +38,8 @@ class ComponentFactoryFileGenerator(
             fileName = "${componentType.declaration.simpleName.asString()}Factory"
         )
             .indent("    ")
-            .addImport("com.example.core", "DependenciesProvider")
-            .addImport("com.example.core", "provide")
+            .addImport("com.noxis.core", "DependenciesProvider")
+            .addImport("com.noxis.core", "provide")
             .addType(componentFactorySpec.componentFactoryObjectSpec)
             .build()
     }
@@ -159,7 +159,7 @@ class ComponentFactoryFileGenerator(
             .addFunction(createComponentFunSpec)
             .addKdoc(
                 """
-                    Файл сгенерирован [com.example.ksp_component_builder.ComponentFactoryProcessor]
+                    Файл сгенерирован [com.noxis.ksp_component_builder.ComponentFactoryProcessor]
                 """.trimIndent()
             )
             .build()
